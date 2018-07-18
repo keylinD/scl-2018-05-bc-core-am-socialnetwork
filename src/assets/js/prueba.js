@@ -76,8 +76,12 @@ db.collection("publicacion").onSnapshot((querySnapshot) => {
       `
   });
 });
-
 //borrar datos
+db.collection("publicacion").doc("DC").delete().then(function() {
+  console.log("Document successfully deleted!");
+}).catch(function(error) {
+  console.error("Error removing document: ", error);
+});
 function eliminar(id) {
   let confirmarEliminar = confirm('¿Estas seguro de eliminar?');
   if (confirmarEliminar == true) {
