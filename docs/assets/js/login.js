@@ -83,7 +83,7 @@ function logout(){
   firebase.auth().signOut()
   .then(()=>{
     console.log("Chao");
-    {window.location="login.html"}
+    {window.location="/src/login.html"}
   })
   .catch();
 }

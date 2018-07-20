@@ -15,7 +15,7 @@ function logout(){
   firebase.auth().signOut()
   .then(()=>{
     console.log("Chao");
-    {window.location="login.html"}
+    {window.location="/src/login.html"}
   })
   .catch();
 }
@@ -41,8 +41,7 @@ function guardar(){
       title: titulopublicacion,
       text: publicacion,
       img: url,
-      like: 0,
-      // comments: comentario,
+
     })
     .then(function(docRef) {
       console.log("Document written with ID: ", docRef.id);
